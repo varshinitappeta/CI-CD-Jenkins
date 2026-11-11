@@ -1,0 +1,65 @@
+pipeline
+{
+agent any
+stages
+{
+stage('checkout ')
+{
+steps
+{
+echo "checkout has successfully completed"
+}
+}
+stage('info')
+{
+steps
+{
+echo "Jenkins ci and cd"
+}
+}
+stage('build')
+{
+steps
+{
+echo "file has been build successfully"
+}
+}
+stage('test')
+{
+steps
+{
+echo "file has been tested successfully"
+}
+}
+stage('package')
+{
+steps
+{
+echo "Jenkins package is running"
+}
+}
+stage('artifact generation')
+{
+steps
+{
+echo "Artifact has been generated"
+}
+}
+stage('deploy')
+{
+steps
+{
+echo "deploy success!"
+}
+}
+}
+post
+{
+success
+{
+echo "Pipeline completed successfully!"
+}
+failure{
+ echo "Pipeline failed!"
+}
+}}
